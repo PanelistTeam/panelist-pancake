@@ -1,0 +1,45 @@
+# Android Studio
+.idea/caches/
+.idea/inspectionProfiles/
+.idea/runConfigurations/
+.idea/**/dictionaries/
+.idea/**/libraries/
+.idea/**/shelf/
+.idea/**/assetWizardSettings.xml
+.idea/**/gradle.xml
+.idea/**/misc.xml
+.idea/**/modules.xml
+.idea/**/runConfigurations.xml
+.idea/**/tasks.xml
+.idea/**/workspace.xml
+*.iml
+
+# Gradle
+.gradle/
+gradle/wrapper/
+gradlew
+gradlew.sh
+gradlew.bat
+
+# Compiled files, debug & runtime output
+build/
+captures/
+bin/
+gen/
+out/
+.externalNativeBuild/
+*.apk
+*.ap_
+*.class
+*.dex
+*.log
+
+# Keystore files
+*.jks
+
+# Local configuration
+local.properties
+
+# OS bullshittery
+.DS_Store
+Thumbs.db
