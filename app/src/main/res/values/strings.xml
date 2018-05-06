@@ -1,3 +1,16 @@
 <resources>
 	<string name="app_name">Panelist</string>
+	<string name="exitButtonText">Wyjdź z programu</string>
+	<string name="enterWithoutAuthButtonText">Start</string>
+	<string name="enterWithoutAuthWelcomeText">Podaj nazwę użykownika jeżeli chcesz zalogować się bez rejestracji:</string>
+	<string name="enterWithoutAuthAlternativeText">lub użyj innej metody autoryzacji:</string>
+	<string name="google">Google</string>
+	<string name="jsos">JSOS</string>
+	<string name="steam">Steam</string>
+	<string name="github">GitHub</string>
+	<string name="twitter">Twitter</string>
+	<string name="facebook">Facebook</string>
+	<string name="witaj_w_panelist">WITAJ W PANELIST</string>
+	<string name="getUserNameText">Podaj nazwę użytkownika</string>
+	<string name="goButton">Go</string>
 </resources>
