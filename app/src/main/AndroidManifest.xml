@@ -9,7 +9,7 @@
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme" >
 		
-		<activity android:label="Hello World m8!" android:name=".HelloWorldActivity">
+		<activity android:label="@string/helloworldActivityName" android:name=".HelloWorldActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
 				<category android:name="android.intent.category.LAUNCHER"/>

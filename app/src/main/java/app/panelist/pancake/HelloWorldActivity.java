@@ -11,6 +11,6 @@ public class HelloWorldActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_helloworld);
 		
-		((TextView)findViewById(R.id.textView)).setText("Hello World!");
+		((TextView)findViewById(R.id.helloWorldTextView)).setText(R.string.helloworld);
 	}
 }
