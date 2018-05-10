@@ -1,5 +1,7 @@
 <resources>
 	<string name="app_name">Panelist</string>
+	<string name="open_drawer">Open navigation drawer</string>
+	<string name="close_drawer">Close navigation drawer</string>
 	<string name="exitButtonText">Wyjdź z programu</string>
 	<string name="enterWithoutAuthButtonText">Start</string>
 	<string name="enterWithoutAuthWelcomeText">Podaj nazwę użykownika jeżeli chcesz zalogować się bez rejestracji:</string>
