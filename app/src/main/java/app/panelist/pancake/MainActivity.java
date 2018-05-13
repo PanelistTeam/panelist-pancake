@@ -1,27 +1,51 @@
 package app.panelist.pancake;
 
+import android.content.ClipData;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 	private DrawerLayout drawerLayout;
 	private ActionBarDrawerToggle actionBarDrawerToggle;
+	private NavigationView navigationView;
+	private Toolbar toolbar;
+	private ClipData.Item logoutItem;
+	private TextView usernameTextView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		Intent ownIntent = getIntent();
 		
-		Toolbar toolbar = findViewById(R.id.toolbar);
-		setSupportActionBar(toolbar);
+		final Intent loginIntent = new Intent(this, LoginActivity.class);
+		
+		toolbar = findViewById(R.id.toolbar);
 		drawerLayout = findViewById(R.id.drawer_layout);
+		navigationView = findViewById(R.id.navigation_view);
+		usernameTextView = findViewById(R.id.usernameTextView);
+		
+		usernameTextView.setText(ownIntent.getStringExtra("userName"));
+		setSupportActionBar(toolbar);
 		actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer);
 		drawerLayout.addDrawerListener(actionBarDrawerToggle);
+		
+		navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+			@Override
+			public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+				startActivity(loginIntent);
+				return false;
+			}
+		});
 	}
 	
 	@Override
@@ -38,8 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		if (actionBarDrawerToggle.onOptionsItemSelected(item))
-			return true;
-		return super.onOptionsItemSelected(item);
+		return actionBarDrawerToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
 	}
 }
