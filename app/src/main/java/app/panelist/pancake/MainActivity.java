@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 	private NavigationView navigationView;
 	private Toolbar toolbar;
 	private ClipData.Item logoutItem;
-	private TextView usernameTextView;
+	private TextView username;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +33,11 @@ public class MainActivity extends AppCompatActivity {
 		toolbar = findViewById(R.id.toolbar);
 		drawerLayout = findViewById(R.id.drawer_layout);
 		navigationView = findViewById(R.id.navigation_view);
-		usernameTextView = findViewById(R.id.usernameTextView);
 		
-		usernameTextView.setText(ownIntent.getStringExtra("userName"));
+		View navigationHeader = navigationView.getHeaderView(0);
+		username = navigationHeader.findViewById(R.id.username);
+		username.setText(ownIntent.getStringExtra("username"));
+		
 		setSupportActionBar(toolbar);
 		actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer);
 		drawerLayout.addDrawerListener(actionBarDrawerToggle);

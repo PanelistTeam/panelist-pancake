@@ -24,11 +24,10 @@ public class LoginActivity extends AppCompatActivity
 		
 		mainIntent = new Intent(this, MainActivity.class);
 		bundleToSend = new Bundle();
-		
 		View.OnClickListener goListener = new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				bundleToSend.putString("userName", usernameLoginEditText.getText().toString());
+				bundleToSend.putString("username", usernameLoginEditText.getText().toString());
 				mainIntent.putExtras(bundleToSend);
 				startActivity(mainIntent);
 			}
