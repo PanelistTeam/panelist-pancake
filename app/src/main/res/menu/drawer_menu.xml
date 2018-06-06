@@ -4,7 +4,10 @@
 	android:layout_width="wrap_content">
 	<group android:checkableBehavior="single">
 		<item
-			android:id="@+id/logoutItem"
-			android:title="@string/wyloguj" />
+			android:id="@+id/settings_item"
+			android:title="@string/settings" />
+		<item
+			android:id="@+id/logout_item"
+			android:title="@string/logout" />
 	</group>
 </menu>

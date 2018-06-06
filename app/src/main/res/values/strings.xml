@@ -15,7 +15,10 @@
 	<string name="witaj_w_panelist">WITAJ W PANELIST</string>
 	<string name="getUserNameText">Podaj nazwę użytkownika</string>
 	<string name="goButton">Go</string>
-	<string name="wyloguj">Wyloguj</string>
+	
+	<!-- drawer_menu -->
+	<string name="settings">Ustawienia</string>
+	<string name="logout">Wyloguj</string>
 	
 	<!-- WelcomeFragment -->
 	<string name="instruction">Witaj w Panelist! Naciśnij przycisk u dołu ekranu, aby dołączyć do pokoju, bądź utworzyć własny.</string>

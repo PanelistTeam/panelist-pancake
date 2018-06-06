@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -30,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		Intent ownIntent = getIntent();
 		
+		setNavigationView();
 		final Intent loginIntent = new Intent(this, LoginActivity.class);
 		
 		toolbar = findViewById(R.id.toolbar);
 		drawerLayout = findViewById(R.id.drawer_layout);
-		navigationView = findViewById(R.id.navigation_view);
 		
 		View navigationHeader = navigationView.getHeaderView(0);
 		username = navigationHeader.findViewById(R.id.username);
@@ -43,14 +44,6 @@ public class MainActivity extends AppCompatActivity {
 		setSupportActionBar(toolbar);
 		actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer);
 		drawerLayout.addDrawerListener(actionBarDrawerToggle);
-		
-		navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-			@Override
-			public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-				startActivity(loginIntent);
-				return false;
-			}
-		});
 		
 		try {
 			setFragment(WelcomeFragment.class.newInstance());
@@ -67,6 +60,33 @@ public class MainActivity extends AppCompatActivity {
 				.commit();
 	}
 	
+    private void setNavigationView() {
+        navigationView = findViewById(R.id.navigation_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            	onSelectMenuItem(item);
+	            new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        drawerLayout.closeDrawers();
+                    }
+                }, 0);
+                return false;
+            }
+        });
+    }
+	
+    private void onSelectMenuItem(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.settings_item:
+                break;
+            case R.id.logout_item:
+                startActivity(new Intent(this, LoginActivity.class));
+                break;
+        }
+    }
+    
 	@Override
 	public void onPostCreate(Bundle savedInstance) {
 		super.onPostCreate(savedInstance);
