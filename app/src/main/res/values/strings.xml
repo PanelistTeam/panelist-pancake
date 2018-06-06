@@ -16,10 +16,22 @@
 	<string name="getUserNameText">Podaj nazwę użytkownika</string>
 	<string name="goButton">Go</string>
 	
+	<!-- fragment_welcome -->
+	<string name="textView_fragmentWelcome_userInstruction">Witaj w Panelist! Naciśnij przycisk u dołu ekranu, aby dołączyć do pokoju, bądź utworzyć własny.</string>
+	
+	<!-- dialog_join_room -->
+	<string name="textView_dialogJoinRoom_joinByLink">Dołącz do pokoju poprzez link</string>
+	<string name="editText_dialogJoinRoom_joinByLink">Podaj link do pokoju</string>
+	<string name="button_dialogJoinRoom_joinByLink">Dołącz</string>
+	
+	<string name="textView_dialogJoinRoom_joinByQrCode">...lub skanując kod QR</string>
+	<string name="button_dialogJoinRoom_joinByQrCode">Skanuj kod QR</string>
+	
+	<string name="textView_dialogJoinRoom_createRoom">...albo stwórz nowy pokój</string>
+	<string name="button_dialogJoinRoom_createRoom">Stwórz pokój</string>
+	
 	<!-- drawer_menu -->
 	<string name="settings">Ustawienia</string>
 	<string name="logout">Wyloguj</string>
 	
-	<!-- WelcomeFragment -->
-	<string name="instruction">Witaj w Panelist! Naciśnij przycisk u dołu ekranu, aby dołączyć do pokoju, bądź utworzyć własny.</string>
 </resources>
