@@ -6,6 +6,8 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -49,6 +51,20 @@ public class MainActivity extends AppCompatActivity {
 				return false;
 			}
 		});
+		
+		try {
+			setFragment(WelcomeFragment.class.newInstance());
+		} catch (ReflectiveOperationException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void setFragment(Fragment fragment) {
+		getSupportFragmentManager()
+				.beginTransaction()
+				.setTransition(FragmentTransaction.TRANSIT_EXIT_MASK)
+				.replace(R.id.main_activity_content, fragment)
+				.commit();
 	}
 	
 	@Override
