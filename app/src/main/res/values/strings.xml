@@ -24,14 +24,22 @@
 	<string name="editText_dialogJoinRoom_joinByLink">Podaj link do pokoju</string>
 	<string name="button_dialogJoinRoom_joinByLink">Dołącz</string>
 	
-	<string name="textView_dialogJoinRoom_joinByQrCode">...lub skanując kod QR</string>
+	<string name="textView_dialogJoinRoom_joinByQrCode">…lub skanując kod QR</string>
 	<string name="button_dialogJoinRoom_joinByQrCode">Skanuj kod QR</string>
 	
-	<string name="textView_dialogJoinRoom_createRoom">...albo stwórz nowy pokój</string>
+	<string name="textView_dialogJoinRoom_createRoom">…albo stwórz nowy pokój</string>
 	<string name="button_dialogJoinRoom_createRoom">Stwórz pokój</string>
 	
 	<!-- drawer_menu -->
 	<string name="settings">Ustawienia</string>
 	<string name="logout">Wyloguj</string>
 	
+	<!-- create_askroom -->
+	<string name="enter_room_name">Podaj nazwę pokoju:</string>
+	<string name="enter_room_name_hint">Tu wpisz nazwę pokoju…</string>
+	<string name="choose_room_type">Typ pokoju:</string>
+	<string name="enter_room_desc">Opis pokoju:</string>
+	<string name="enter_room_desc_hint">Tu wpisz opis pokoju…</string>
+	<string name="create_room">Stwórz pokój</string>
+
 </resources>
