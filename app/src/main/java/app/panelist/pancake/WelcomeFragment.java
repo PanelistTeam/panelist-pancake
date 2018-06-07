@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 public class WelcomeFragment extends Fragment {
 	
-	FloatingActionButton joinRoomFloatingActionButton;
+	FloatingActionButton joinAskroomFloatingActionButton;
 	
 	public WelcomeFragment() {
 		// Required empty public constructor
@@ -29,11 +29,11 @@ public class WelcomeFragment extends Fragment {
 	}
 	
 	private void setJoinRoomFloatingActionButton() {
-		joinRoomFloatingActionButton = getView().findViewById(R.id.floatingActionButton_fragmentWelcome_joinRoom);
-		joinRoomFloatingActionButton.setOnClickListener(new View.OnClickListener() {
+		joinAskroomFloatingActionButton = getView().findViewById(R.id.floatingActionButton_fragmentWelcome_joinAskroom);
+		joinAskroomFloatingActionButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				JoinRoomDialogFragment.newInstance().show(getFragmentManager(), "joinRoomDialogFragment");
+				JoinAskroomDialogFragment.newInstance().show(getFragmentManager(), "joinAskroomDialogFragment");
 			}
 		});
 	}

@@ -7,7 +7,6 @@ import java.util.Objects;
 
 public class CreateAskroomActivity extends AppCompatActivity {
 	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,5 +17,4 @@ public class CreateAskroomActivity extends AppCompatActivity {
 		Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(true);
 		getSupportActionBar().setIcon(R.drawable.ic_arrow_back_black_24dp);
 	}
-	
 }

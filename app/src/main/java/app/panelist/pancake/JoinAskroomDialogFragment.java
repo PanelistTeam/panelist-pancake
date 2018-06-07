@@ -13,15 +13,15 @@ import android.widget.EditText;
 
 import java.util.Objects;
 
-public class JoinRoomDialogFragment extends DialogFragment {
+public class JoinAskroomDialogFragment extends DialogFragment {
 	
-	Button button_dialogJoinRoom_joinByLink;
-	EditText editText_dialogJoinRoom_joinByLink;
-	Button button_dialogJoinRoom_joinByQrCode;
-	Button button_dialogJoinRoom_createRoom;
+	Button button_dialogJoinAskroom_joinByLink;
+	EditText editText_dialogJoinAskroom_joinByLink;
+	Button button_dialogJoinAskroom_joinByQrCode;
+	Button button_dialogJoinAskroom_createAskroom;
 	Intent createAskroomIntent;
 	
-	public JoinRoomDialogFragment() {
+	public JoinAskroomDialogFragment() {
 		// Required empty public constructor
 	}
 	
@@ -31,7 +31,7 @@ public class JoinRoomDialogFragment extends DialogFragment {
 		LayoutInflater inflater = Objects.requireNonNull(getActivity()).getLayoutInflater();
 		
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-		View view = inflater.inflate(R.layout.dialog_join_room, null);
+		View view = inflater.inflate(R.layout.dialog_join_askroom, null);
 		getElementsByIdFromView(view);
 		createAskroomIntent = new Intent(this.getContext(), CreateAskroomActivity.class);
 		setListeners();
@@ -42,31 +42,28 @@ public class JoinRoomDialogFragment extends DialogFragment {
 	
 	public void getElementsByIdFromView(View view)
 	{
-		button_dialogJoinRoom_joinByLink = view.findViewById(R.id.button_dialogJoinRoom_joinByLink);
-		editText_dialogJoinRoom_joinByLink = view.findViewById(R.id.editText_dialogJoinRoom_joinByLink);
-		button_dialogJoinRoom_joinByQrCode = view.findViewById(R.id.button_dialogJoinRoom_joinByQrCode);
-		button_dialogJoinRoom_createRoom = view.findViewById(R.id.button_dialogJoinRoom_createRoom);
+		button_dialogJoinAskroom_joinByLink = view.findViewById(R.id.button_dialogJoinAskroom_joinByLink);
+		editText_dialogJoinAskroom_joinByLink = view.findViewById(R.id.editText_dialogJoinAskroom_joinByLink);
+		button_dialogJoinAskroom_joinByQrCode = view.findViewById(R.id.button_dialogJoinAskroom_joinByQrCode);
+		button_dialogJoinAskroom_createAskroom = view.findViewById(R.id.button_dialogJoinAskroom_createAskroom);
 	}
 	
-	
-	
-	public void setListeners()
-	{
-		button_dialogJoinRoom_joinByLink.setOnClickListener(new View.OnClickListener() {
+	public void setListeners() {
+		button_dialogJoinAskroom_joinByLink.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				// tu przejscie do wyszukiwania poprzez link (polaczyc sie z baza trzeba)
 			}
 		});
 		
-		button_dialogJoinRoom_joinByQrCode.setOnClickListener(new View.OnClickListener() {
+		button_dialogJoinAskroom_joinByQrCode.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				// tu przejscie to modulu czytajacego kod QR
 			}
 		});
 		
-		button_dialogJoinRoom_createRoom.setOnClickListener(new View.OnClickListener() {
+		button_dialogJoinAskroom_createAskroom.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				startActivity(createAskroomIntent);
@@ -74,8 +71,7 @@ public class JoinRoomDialogFragment extends DialogFragment {
 		});
 	}
 	
-	
-	public static JoinRoomDialogFragment newInstance() {
-		return new JoinRoomDialogFragment();
+	public static JoinAskroomDialogFragment newInstance() {
+		return new JoinAskroomDialogFragment();
 	}
 }
