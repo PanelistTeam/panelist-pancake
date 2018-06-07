@@ -41,4 +41,7 @@
 	<string name="enter_room_desc">Opis pokoju:</string>
 	<string name="enter_room_desc_hint">Tu wpisz opis pokoju…</string>
 	<string name="create_room">Stwórz pokój</string>
+	
+	<!-- CreateAskroomActivity -->
+	<string name="title_createAskroomActivity">Stwórz pokój</string>
 </resources>
