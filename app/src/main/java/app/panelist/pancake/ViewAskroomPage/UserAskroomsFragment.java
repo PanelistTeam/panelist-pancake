@@ -1,4 +1,4 @@
-package app.panelist.pancake.MainPage;
+package app.panelist.pancake.ViewAskroomPage;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import app.panelist.pancake.MainPage.FragmentOwner;
+import app.panelist.pancake.MainPage.JoinAskroomDialogFragment;
 import app.panelist.pancake.Models.Askroom;
 import app.panelist.pancake.R;
 

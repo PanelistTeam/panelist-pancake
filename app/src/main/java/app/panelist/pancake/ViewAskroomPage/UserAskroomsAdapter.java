@@ -1,4 +1,4 @@
-package app.panelist.pancake.MainPage;
+package app.panelist.pancake.ViewAskroomPage;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import app.panelist.pancake.MainPage.FragmentOwner;
 import app.panelist.pancake.Models.Askroom;
 import app.panelist.pancake.R;
-import app.panelist.pancake.ViewAskroomPage.AskroomFragment;
 
 public class UserAskroomsAdapter extends RecyclerView.Adapter<UserAskroomsAdapter.AskroomViewHolder> {
 
