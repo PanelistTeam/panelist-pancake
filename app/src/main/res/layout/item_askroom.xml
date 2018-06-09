@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="?android:attr/selectableItemBackground">
+
+	<TextView
+		android:id="@+id/textView_itemAskroom_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:text=""
+		android:textSize="18sp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/textView_itemAskroom_owner"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="8dp"
+		android:layout_marginTop="16dp"
+		android:text=""
+		android:textColor="@android:color/darker_gray"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/textView_itemAskroom_membersNumber"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toEndOf="@+id/imageView_itemAskroom_owner"
+		app:layout_constraintTop_toBottomOf="@+id/textView_itemAskroom_title" />
+
+	<ImageView
+		android:id="@+id/imageView_itemAskroom_owner"
+		android:layout_width="wrap_content"
+		android:layout_height="24dp"
+		android:layout_marginBottom="8dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="16dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/textView_itemAskroom_owner"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintHorizontal_chainStyle="spread_inside"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textView_itemAskroom_title"
+		app:srcCompat="@drawable/ic_owner_24dp" />
+
+	<TextView
+		android:id="@+id/textView_itemAskroom_membersNumber"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="8dp"
+		android:layout_marginEnd="4dp"
+		android:layout_marginTop="16dp"
+		android:text=""
+		android:textColor="@android:color/darker_gray"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@+id/textView_itemAskroom_members"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintHorizontal_chainStyle="spread_inside"
+		app:layout_constraintStart_toEndOf="@+id/textView_itemAskroom_owner"
+		app:layout_constraintTop_toBottomOf="@+id/textView_itemAskroom_title" />
+
+	<TextView
+		android:id="@+id/textView_itemAskroom_members"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="8dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginTop="16dp"
+		android:text="uczestników"
+		android:textColor="@android:color/darker_gray"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.5"
+		app:layout_constraintStart_toEndOf="@+id/textView_itemAskroom_membersNumber"
+		app:layout_constraintTop_toBottomOf="@+id/textView_itemAskroom_title" />
+
+</android.support.constraint.ConstraintLayout>

@@ -17,7 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FragmentOwner {
 	private DrawerLayout drawerLayout;
 	private ActionBarDrawerToggle actionBarDrawerToggle;
 	private NavigationView navigationView;
@@ -46,57 +46,95 @@ public class MainActivity extends AppCompatActivity {
 		drawerLayout.addDrawerListener(actionBarDrawerToggle);
 		
 		try {
-			setFragment(WelcomeFragment.class.newInstance());
+			//setFragment(WelcomeFragment.class.newInstance());
+			UserAskroomsFragment userAskroomsFragment = UserAskroomsFragment.class.newInstance();
+			userAskroomsFragment.setFragmentOwner(this);
+			setFragment(userAskroomsFragment, false);
 		} catch (ReflectiveOperationException e) {
 			e.printStackTrace();
 		}
 	}
-	
-	public void setFragment(Fragment fragment) {
-		getSupportFragmentManager()
+
+	@Override
+	public void setFragment(Fragment fragment, boolean addToBackStack) {
+		FragmentTransaction fragmentTransaction = getSupportFragmentManager()
 				.beginTransaction()
-				.setTransition(FragmentTransaction.TRANSIT_EXIT_MASK)
 				.replace(R.id.main_activity_content, fragment)
-				.commit();
+				.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+
+		if (addToBackStack)
+			fragmentTransaction.addToBackStack("X");
+
+		fragmentTransaction.commit();
 	}
 	
-    private void setNavigationView() {
-        navigationView = findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            	onSelectMenuItem(item);
-	            new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        drawerLayout.closeDrawers();
-                    }
-                }, 0);
-                return false;
-            }
-        });
-    }
+	private void setNavigationView() {
+		navigationView = findViewById(R.id.navigation_view);
+		navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+			@Override
+			public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+				onSelectMenuItem(item);
+				new Handler().postDelayed(new Runnable() {
+					@Override
+					public void run() {
+						drawerLayout.closeDrawers();
+					}
+				}, 0);
+				return false;
+			}
+		});
+	}
 	
-    private void onSelectMenuItem(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.settings_item:
-                break;
-            case R.id.logout_item:
-                startActivity(new Intent(this, LoginActivity.class));
-                break;
-        }
-    }
-    
+	private void onSelectMenuItem(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.settings_item:
+				break;
+			case R.id.logout_item:
+				startActivity(new Intent(this, LoginActivity.class));
+				break;
+		}
+	}
+
 	@Override
 	public void onPostCreate(Bundle savedInstance) {
 		super.onPostCreate(savedInstance);
 		actionBarDrawerToggle.syncState();
+
 	}
 
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		actionBarDrawerToggle.onConfigurationChanged(newConfig);
+	}
+
+	@Override
+	public void setArrow() {
+		actionBarDrawerToggle.setDrawerIndicatorEnabled(false);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		actionBarDrawerToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				onBackPressed();
+			}
+		});
+	}
+
+	@Override
+	public void setBurger() {
+		actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
+		actionBarDrawerToggle.setToolbarNavigationClickListener(null);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+		getSupportActionBar().setDisplayShowHomeEnabled(false);
+		actionBarDrawerToggle.syncState();
+	}
+
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		setBurger();
+		setTitle("Panelist");
 	}
 
 	@Override
