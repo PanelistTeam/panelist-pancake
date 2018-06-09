@@ -3,14 +3,14 @@ package app.panelist.pancake.Models;
 import java.util.Date;
 
 public class Askroom {
-	int id;
-	String title;
-	AskroomType type;
-	boolean isPublic;
-	Date timeCreated;
-	String description;
-	int createdBy;
-	int state;
+	private int id;
+	private String title;
+	private AskroomType type;
+	private boolean isPublic;
+	private Date timeCreated;
+	private String description;
+	private int createdBy;
+	private int state;
 
 	public int getId() {
 		return id;

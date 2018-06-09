@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 import app.panelist.pancake.Models.Askroom;
 import app.panelist.pancake.R;
+import app.panelist.pancake.ViewAskroomPage.AskroomFragment;
 
 public class UserAskroomsAdapter extends RecyclerView.Adapter<UserAskroomsAdapter.AskroomViewHolder> {
 
