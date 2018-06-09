@@ -1,4 +1,4 @@
-package app.panelist.pancake;
+package app.panelist.pancake.CreateAskroomPage;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

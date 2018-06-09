@@ -1,4 +1,4 @@
-package app.panelist.pancake;
+package app.panelist.pancake.MainPage;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.Objects;
+
+import app.panelist.pancake.CreateAskroomPage.CreateAskroomActivity;
+import app.panelist.pancake.R;
 
 public class JoinAskroomDialogFragment extends DialogFragment {
 	

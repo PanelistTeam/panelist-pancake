@@ -1,4 +1,4 @@
-package app.panelist.pancake;
+package app.panelist.pancake.MainPage;
 
 import android.support.v4.app.Fragment;
 

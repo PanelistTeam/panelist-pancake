@@ -1,4 +1,4 @@
-package app.panelist.pancake;
+package app.panelist.pancake.MainPage;
 
 import android.content.ClipData;
 import android.content.Intent;
@@ -16,6 +16,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import app.panelist.pancake.LoginPage.LoginActivity;
+import app.panelist.pancake.R;
 
 public class MainActivity extends AppCompatActivity implements FragmentOwner {
 	private DrawerLayout drawerLayout;

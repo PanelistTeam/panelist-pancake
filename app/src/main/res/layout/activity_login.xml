@@ -7,7 +7,7 @@
 	android:background="@color/LoginBackgroundColor"
 	android:gravity="center"
 	android:orientation="vertical"
-	tools:context=".LoginActivity">
+	tools:context=".LoginPage.LoginActivity">
 	
 	<TextView
 		android:id="@+id/welcomeTextMessage"

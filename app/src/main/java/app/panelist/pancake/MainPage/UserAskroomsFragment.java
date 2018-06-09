@@ -1,4 +1,4 @@
-package app.panelist.pancake;
+package app.panelist.pancake.MainPage;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+
+import app.panelist.pancake.Models.Askroom;
+import app.panelist.pancake.R;
 
 public class UserAskroomsFragment extends Fragment {
 	private RecyclerView recyclerView;

@@ -1,4 +1,4 @@
-package app.panelist.pancake;
+package app.panelist.pancake.MainPage;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

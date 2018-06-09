@@ -9,18 +9,18 @@
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme">
-		<activity android:name=".LoginActivity">
+		<activity android:name=".LoginPage.LoginActivity">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
 		<activity
-			android:name=".MainActivity" />
+			android:name=".MainPage.MainActivity" />
 		<activity
-			android:name=".CreateAskroomActivity"
-			android:parentActivityName=".MainActivity" />
+			android:name=".CreateAskroomPage.CreateAskroomActivity"
+			android:parentActivityName=".MainPage.MainActivity" />
 		<activity
-			android:name=".WriteQuestionActivity" />
+			android:name=".WriteQuestionPage.WriteQuestionActivity" />
 	</application>
 </manifest>

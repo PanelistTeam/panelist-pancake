@@ -1,4 +1,4 @@
-package app.panelist.pancake;
+package app.panelist.pancake.Models;
 
 import java.util.Date;
 
