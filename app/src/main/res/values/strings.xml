@@ -1,3 +1,54 @@
 <resources>
 	<string name="app_name">Panelist</string>
+	<string name="open_drawer">Open navigation drawer</string>
+	<string name="close_drawer">Close navigation drawer</string>
+	<string name="exitButtonText">Wyjdź z programu</string>
+	<string name="enterWithoutAuthButtonText">Start</string>
+	<string name="enterWithoutAuthWelcomeText">Podaj nazwę użykownika jeżeli chcesz zalogować się bez rejestracji:</string>
+	<string name="enterWithoutAuthAlternativeText">lub użyj innej metody autoryzacji:</string>
+	<string name="google">Google</string>
+	<string name="jsos">JSOS</string>
+	<string name="steam">Steam</string>
+	<string name="github">GitHub</string>
+	<string name="twitter">Twitter</string>
+	<string name="facebook">Facebook</string>
+	<string name="witaj_w_panelist">WITAJ W PANELIST</string>
+	<string name="getUserNameText">Podaj nazwę użytkownika</string>
+	<string name="goButton">Go</string>
+
+	<!-- fragment_welcome -->
+	<string name="textView_fragmentWelcome_userInstruction">Witaj w Panelist! Naciśnij przycisk u dołu ekranu, aby dołączyć do pokoju, bądź utworzyć własny.</string>
+
+	<!-- dialog_join_room -->
+	<string name="textView_dialogJoinAskroom_joinByLink">Dołącz do pokoju poprzez link</string>
+	<string name="editText_dialogJoinAskroom_joinByLink">Podaj link do pokoju</string>
+	<string name="button_dialogJoinAskroom_joinByLink">Dołącz</string>
+
+	<string name="textView_dialogJoinAskroom_joinByQrCode">…lub skanując kod QR</string>
+	<string name="button_dialogJoinAskroom_joinByQrCode">Skanuj kod QR</string>
+
+	<string name="textView_dialogJoinAskroom_createAskroom">…albo stwórz nowy pokój</string>
+	<string name="button_dialogJoinAskroom_createAskroom">Stwórz pokój</string>
+
+	<!-- drawer_menu -->
+	<string name="settings">Ustawienia</string>
+	<string name="logout">Wyloguj</string>
+
+	<!-- create_askroom -->
+	<string name="enter_room_name">Podaj nazwę pokoju:</string>
+	<string name="enter_room_name_hint">Tu wpisz nazwę pokoju…</string>
+	<string name="choose_room_type">Typ pokoju:</string>
+	<string name="enter_room_desc">Opis pokoju:</string>
+	<string name="enter_room_desc_hint">Tu wpisz opis pokoju…</string>
+	<string name="create_room">Stwórz pokój</string>
+
+	<!-- CreateAskroomActivity -->
+	<string name="title_createAskroomActivity">Stwórz pokój</string>
+
+	<!-- item_askroom -->
+	<string name="textView_itemAskroom_members">uczestników</string>
+
+	<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="wpisz_tre_pytania_max_840_znak_w">Wpisz treść pytania (max. 840 znaków)</string>
 </resources>

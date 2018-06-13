@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_centerVertical="true"
+	android:background="@color/LoginBackgroundColor"
+	android:gravity="center"
+	android:orientation="vertical"
+	tools:context=".LoginPage.LoginActivity">
+	
+	<TextView
+		android:id="@+id/welcomeTextMessage"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="8dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:text="@string/witaj_w_panelist"
+		android:textAlignment="center"
+		android:textSize="28sp"
+		
+		/>
+	
+	<TextView
+		android:id="@+id/enterWithutAuthText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="8dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:text="@string/enterWithoutAuthWelcomeText"
+		android:textAlignment="center" />
+	
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+		
+		<EditText
+			android:id="@+id/usernameLoginEditText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:ems="10"
+			android:hint="@string/getUserNameText"
+			android:inputType="textPersonName"
+			android:labelFor="@id/googleButton"
+			android:selectAllOnFocus="true"
+			android:singleLine="true"
+			android:textColor="@color/LoginTextColor" />
+		
+		<Button
+			android:id="@+id/goButton"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:background="@android:drawable/ic_menu_send" />
+	
+	</LinearLayout>
+	
+	
+	<TextView
+		android:id="@+id/alternativeAuthTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="8dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:text="@string/enterWithoutAuthAlternativeText"
+		android:textAlignment="center" />
+	
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		
+		<Button
+			android:id="@+id/jsosButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:text="@string/jsos" />
+		
+		<Button
+			android:id="@+id/steamButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:text="@string/steam" />
+		
+		<Button
+			android:id="@+id/GitHub"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:text="@string/github" />
+	</LinearLayout>
+	
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		
+		<Button
+			android:id="@+id/twitterButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:text="@string/twitter" />
+		
+		<Button
+			android:id="@+id/googleButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:text="@string/google" />
+		
+		<Button
+			android:id="@+id/facebookButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginTop="8dp"
+			android:text="@string/facebook" />
+	</LinearLayout>
+
+</LinearLayout>

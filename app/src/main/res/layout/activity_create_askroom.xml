@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/create_askroom_drawer_layout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fitsSystemWindows="true"
+	tools:context=".CreateAskroomPage.CreateAskroomActivity">
+	
+	<android.support.constraint.ConstraintLayout
+			android:id="@+id/create_askroom_content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+		
+		<include
+			android:id="@+id/toolbar"
+			layout="@layout/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+		
+		<TextView
+			android:id="@+id/textView_enterRoomName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginTop="20dp"
+			android:text="@string/enter_room_name"
+			android:textSize="18sp"
+			android:typeface="normal"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+			
+			<EditText
+				android:id="@+id/editText_enterRoomName"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="20dp"
+				android:ems="10"
+				android:hint="@string/enter_room_name_hint"
+				android:inputType="textPersonName"
+				android:textSize="18sp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textView_enterRoomName" />
+			
+			<TextView
+				android:id="@+id/textView_chooseRoomType"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="20dp"
+				android:text="@string/choose_room_type"
+				android:textSize="18sp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/editText_enterRoomName" />
+			
+			<Spinner
+				android:id="@+id/spinner_RoomType"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="20dp"
+				android:backgroundTint="@color/colorPrimaryDark"
+				app:layout_constraintStart_toEndOf="@+id/textView_chooseRoomType"
+				app:layout_constraintTop_toBottomOf="@+id/editText_enterRoomName"
+				tools:targetApi="lollipop" />
+			
+			<TextView
+				android:id="@+id/textView_roomdescription"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="20dp"
+				android:text="@string/enter_room_desc"
+				android:textSize="18sp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textView_chooseRoomType" />
+			
+			<EditText
+				android:id="@+id/editText_enterRoomDesc"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="20dp"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="20dp"
+				android:lines="3"
+				android:minLines="1"
+				android:maxLines="3"
+				android:gravity="top|start"
+				android:hint="@string/enter_room_desc_hint"
+				android:inputType="textMultiLine"
+				android:scrollbars="vertical"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/textView_roomdescription" />
+			
+			<Button
+				android:id="@+id/button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="20dp"
+				android:layout_marginStart="20dp"
+				android:layout_marginTop="20dp"
+				android:text="@string/create_room"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/editText_enterRoomDesc" />
+		
+		</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.DrawerLayout>
