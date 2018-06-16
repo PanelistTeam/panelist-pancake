@@ -6,10 +6,17 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
+import app.panelist.pancake.Models.Askroom;
+import app.panelist.pancake.Models.Question;
 import app.panelist.pancake.R;
 import app.panelist.pancake.WriteQuestionPage.WriteQuestionActivity;
 
@@ -17,6 +24,10 @@ public class AskroomFragment extends Fragment {
 
 	FloatingActionButton addQuestionButton;
 	Intent createQuestionIntent;
+	
+	private RecyclerView recyclerView;
+	private RecyclerView.Adapter adapter;
+	private RecyclerView.LayoutManager layoutManager;
 	
 	public AskroomFragment() {
 		// Required empty public constructor
@@ -26,7 +37,29 @@ public class AskroomFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
-		return inflater.inflate(R.layout.fragment_askroom, container, false);
+		final View view = inflater.inflate(R.layout.fragment_askroom, container, false);
+		recyclerView = view.findViewById(R.id.recyclerView_fragmentAskroom);
+		recyclerView.setHasFixedSize(true);
+		
+		layoutManager = new LinearLayoutManager(getContext());
+		recyclerView.setLayoutManager(layoutManager);
+		
+		DividerItemDecoration itemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
+		recyclerView.addItemDecoration(itemDecoration);
+		
+		ArrayList<Question> questions = new ArrayList<>();
+		Question testQuestion = new Question();
+		testQuestion.setContent("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+		testQuestion.setSubmittedBy(1234);
+		testQuestion.setScore(-50);
+		questions.add(testQuestion);
+		questions.add(testQuestion);
+		questions.add(testQuestion);
+		
+		adapter = new AskroomAdapter(questions);
+		recyclerView.setAdapter(adapter);
+		
+		return view;
 	}
 
 	@Override
