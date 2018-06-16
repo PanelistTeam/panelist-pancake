@@ -44,6 +44,9 @@
 
 	<!-- CreateAskroomActivity -->
 	<string name="title_createAskroomActivity">Stwórz pokój</string>
+	
+	<!-- WriteQuestionActivity -->
+	<string name="title_writeQuestionActivity">Zadaj pytanie</string>
 
 	<!-- item_askroom -->
 	<string name="textView_itemAskroom_members">uczestników</string>

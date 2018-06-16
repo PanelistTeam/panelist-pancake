@@ -21,6 +21,7 @@
 			android:name=".CreateAskroomPage.CreateAskroomActivity"
 			android:parentActivityName=".MainPage.MainActivity" />
 		<activity
-			android:name=".WriteQuestionPage.WriteQuestionActivity" />
+			android:name=".WriteQuestionPage.WriteQuestionActivity"
+			android:parentActivityName=".MainPage.MainActivity" />
 	</application>
 </manifest>
